@@ -43,7 +43,7 @@ export function ViewResult() {
 
   })
 
-  
+
 
   return (
     <div className="space-y-2 p-2 flex flex-col items-center sm:space-y-6 sm:p-6 sm:flex sm:flex-col sm:items-stretch  "> 
@@ -79,7 +79,7 @@ export function ViewResult() {
       </div>
 
      
-      <div className=" p-2 sm:p-4 rounded-lg border overflow-x-scroll ">
+      <div className=" p-2 sm:p-4 rounded-lg border  ">
         <h2 className="text-xl font-semibold mb-4">Network Data Table</h2>
         <div >
           <DataTable data={data} columns={columns} />
