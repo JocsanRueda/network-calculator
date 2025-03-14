@@ -2,6 +2,10 @@
 
 This project is a network calculator developed with React, TypeScript, and Vite. It allows users to define a network, specify subnets using Variable Length Subnet Masking (VLSM), and view the results of the network segmentation.
 
+## Website
+
+You can view the live version of the website at [https://jocsanrueda.github.io/network-calculator/](https://jocsanrueda.github.io/network-calculator/).
+
 ## Features
 
 - Define networks and subnets using VLSM.
