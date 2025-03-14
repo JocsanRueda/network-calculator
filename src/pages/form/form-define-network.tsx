@@ -77,7 +77,7 @@ export function FormDefineNetwork() {
             name="subnetMask"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>subnet Mask</FormLabel>
+                <FormLabel>Subnet Mask</FormLabel>
                 <FormControl>
               
                   <Select {...field} onValueChange={field.onChange} defaultValue={field.value}>

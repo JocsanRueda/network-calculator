@@ -46,8 +46,8 @@ export function ViewResult() {
   
 
   return (
-    <div className="space-y-6 p-6"> {/* Contenedor principal con espaciado y fondo */}
-      {/* Sección: Network Info */}
+    <div className="space-y-2 p-2 flex flex-col items-center sm:space-y-6 sm:p-6 sm:flex sm:flex-col sm:items-stretch  "> 
+
       <div className=" p-4 rounded-lg border">
         <h2 className="text-xl font-semibold mb-2">Network Information</h2>
         <div className="space-y-2">
@@ -62,10 +62,10 @@ export function ViewResult() {
         </div>
       </div>
 
-      {/* Sección: Statics */}
-      <div className=" p-4 rounded-lg border">
-        <h2 className="text-xl font-semibold mb-4">Network Statistics</h2>
-        <div className="flex flex-col gap-4 md:flex-row md:flex-wrap justify-center">
+  
+      <div className=" p-2 sm:p-4 rounded-lg border">
+        <h2 className="text-xl font-semibold mb-2 sm:mb-4">Network Statistics</h2>
+        <div className="flex flex-col gap-3 sm:gap-4 md:flex-row md:flex-wrap justify-center">
           {stats.map((stat, index) => (
             <StatisticCard
               key={index}
@@ -78,10 +78,10 @@ export function ViewResult() {
         </div>
       </div>
 
-      {/* Sección: Table Data */}
-      <div className=" p-4 rounded-lg border">
+     
+      <div className=" p-2 sm:p-4 rounded-lg border overflow-x-scroll ">
         <h2 className="text-xl font-semibold mb-4">Network Data Table</h2>
-        <div className="overflow-x-auto">
+        <div >
           <DataTable data={data} columns={columns} />
         </div>
       </div>
