@@ -7,10 +7,14 @@ import { useAppContext } from "../context/AppContext"
 import { Network } from "../model/network/class/network"
 import { subnetNetwork } from "../utils/ip-utils"
 import { Badge } from "../components/ui/badge"
+import { ScrollArea } from "@radix-ui/react-scroll-area"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 export function ViewResult() {
 
   const {ipAdress,subnetMask,hostList}= useAppContext()
+
+  const isMobile=useIsMobile()
 
 
   const network= new Network(ipAdress,subnetMask)
@@ -43,7 +47,7 @@ export function ViewResult() {
 
   })
 
-
+  console.log(isMobile)
 
   return (
     <div className="space-y-2 p-2 flex flex-col items-center sm:space-y-6 sm:p-6 sm:flex sm:flex-col sm:items-stretch  "> 
@@ -81,8 +85,12 @@ export function ViewResult() {
      
       <div className=" p-2 sm:p-4 rounded-lg border  ">
         <h2 className="text-xl font-semibold mb-4">Network Data Table</h2>
-        <div >
-          <DataTable data={data} columns={columns} />
+        <div className="overflow-y-scroll sm:overflow-visible">
+          {
+            isMobile?<ScrollArea className="h-[200px] w-[320px] p-2">
+              <DataTable columns={columns} data={data} />
+            </ScrollArea> :<DataTable columns={columns} data={data} />
+          }
         </div>
       </div>
     </div>

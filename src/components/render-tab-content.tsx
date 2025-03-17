@@ -27,7 +27,7 @@ const RenderTabContent = () => {
 
   return<>
 
-    <div className=" border-b border-l border-r border-dashed items  rounded-md flex flex-col h-screen  ">
+    <div className=" items  rounded-md flex flex-col h-screen ">
      
       <div>
         <MenuBar/>
@@ -39,7 +39,7 @@ const RenderTabContent = () => {
           (tabActive!==enumPages.HOME &&  <MenuItems />)
         }
       </div>
-      <div className="flex-grow mx-5 flex flex-col my-auto justify-center items-center border border-dashed rounded-lg ">
+      <div className="flex-grow  mx-2 flex flex-col my-auto justify-center items-center border border-dashed rounded-lg  sm:overflow-visible">
         {render()}
       </div>
       
